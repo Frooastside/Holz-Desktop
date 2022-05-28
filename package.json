@@ -1,19 +1,18 @@
 {
-  "name": "@wolkeneis/<<NAME>>",
-  "version": "0.0.0",
-  "private": true,
-  "description": "<<NAME>>",
+  "name": "holz-desktop",
+  "version": "0.1.0",
+  "description": "Holz Desktop Client",
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wolkeneis/<<NAME>>.git"
+    "url": "git+https://github.com/frooastside/Holz-Desktop.git"
   },
   "author": "Frooastside <frooastside@gmail.com>",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/wolkeneis/<<NAME>>/issues"
+    "url": "https://github.com/frooastside/Holz-Desktop/issues"
   },
-  "homepage": "https://<<NAME>>.wolkeneis.dev/",
+  "homepage": "https://holz.wolkeneis.dev/",
   "engines": {
     "node": "*",
     "vscode": "^1.22.0",
@@ -25,8 +24,8 @@
   "build": {
     "asar": true,
     "asarUnpack": true,
-    "appId": "dev.wolkeneis.<<NAME>>",
-    "productName": "<<NAME>>",
+    "appId": "dev.wolkeneis.holz",
+    "productName": "Holz Desktop",
     "copyright": "Copyright © 2022 Wolkeneis",
     "mac": {
       "category": "public.app-category.utilities"
@@ -60,6 +59,8 @@
   },
   "dependencies": {
     "electron-is-dev": "^2.0.0",
+    "puppeteer-core": "^14.1.1",
+    "puppeteer-in-electron": "^3.0.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

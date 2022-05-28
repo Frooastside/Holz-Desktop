@@ -1,6 +1,6 @@
 {
-  "short_name": "<<NAME>>",
-  "name": "<<NAME>>",
+  "short_name": "Holz",
+  "name": "Holz Desktop Client",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
