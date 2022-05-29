@@ -58,6 +58,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "electron-deeplink": "^1.0.10",
     "electron-is-dev": "^2.0.0",
     "handlebars": "^4.7.7",
     "puppeteer-core": "^14.1.1",
