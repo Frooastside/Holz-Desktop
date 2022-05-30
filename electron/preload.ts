@@ -7,11 +7,8 @@ declare global {
 }
 
 const api = {
-  solveCaptcha: (url?: string, sitekey?: string) => {
-    ipcRenderer.send("captcha", {
-      url: url ?? "https://www.google.com/recaptcha/api2/demo",
-      sitekey: sitekey ?? "6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-"
-    });
+  solveCaptcha: (cid: string) => {
+    ipcRenderer.send("captcha", cid);
   },
 
   on: (channel: string, callback: (data: any) => void) => {
