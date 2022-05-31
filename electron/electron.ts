@@ -1,5 +1,4 @@
 import { app, BrowserWindow, ipcMain, IpcMainEvent } from "electron";
-import { Deeplink } from "electron-deeplink";
 import isDev from "electron-is-dev";
 import fetch from "node-fetch";
 import { join } from "path";
@@ -30,10 +29,10 @@ async function createMainWindow() {
     }
   });
 
-  const deeplink = new Deeplink({ app: app, mainWindow: window, protocol: "holz", isDev: isDev });
-  deeplink.on("received", (link: string) => {
-    console.log(link);
-  });
+  //const deeplink = new Deeplink({ app: app, mainWindow: window, protocol: "holz", isDev: isDev });
+  //deeplink.on("received", (link: string) => {
+  //  console.log(link);
+  //});
 
   const port = process.env.PORT || 8000;
   const url = isDev ? `http://localhost:${port}` : join(__dirname, "../dist/index.html");
