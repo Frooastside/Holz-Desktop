@@ -10,6 +10,14 @@ import { stringify } from "querystring";
 import { validate } from "uuid";
 import solve from "./solver";
 
+type Captcha = {
+  cid: string;
+  url: string;
+  sitekey: string;
+  token?: string;
+  creationDate?: number;
+};
+
 let browser: Browser;
 
 puppeteer.use(StealthPlugin());
@@ -68,13 +76,7 @@ ipcMain.on("captcha", async (event: IpcMainEvent, cid?: string) => {
     if (!response.ok) {
       throw new Error(await response.text());
     }
-    const fetchedCaptcha: {
-      cid: string;
-      url: string;
-      sitekey: string;
-      token?: string;
-      creationDate?: number;
-    } = await response.json();
+    const fetchedCaptcha: Captcha = (await response.json()) as Captcha;
     if (fetchedCaptcha.token) {
       throw new Error("Already solved.");
     }

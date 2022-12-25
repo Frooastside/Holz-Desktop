@@ -9,8 +9,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": ["DOM", "ESNext"],
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "newLine": "lf",
     "noEmit": false,
     "noFallthroughCasesInSwitch": true,
@@ -25,7 +25,7 @@
     "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "esnext"
+    "target": "ESNext"
   },
   "include": ["**/*.ts"]
 }
