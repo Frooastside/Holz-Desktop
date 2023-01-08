@@ -28,8 +28,6 @@ export default async function solve(
     const page = await pie.getPage(browser as any, window);
     await page.setRequestInterception(true);
 
-    captcha.url = captcha.url;
-
     page.on("request", (request) => {
       if (request.url() === captcha.url && request.isNavigationRequest()) {
         request.respond({
